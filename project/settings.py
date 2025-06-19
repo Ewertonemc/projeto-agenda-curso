@@ -1,3 +1,5 @@
+# type: ignore
+# Flake8: noqa
 """
 Django settings for project project.
 
@@ -90,7 +92,7 @@ DATABASES = {
 AUTH_PASSWORD_VALIDATORS = [
     {
         'NAME':
-        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',
+        'django.contrib.auth.password_validation.UserAttributeSimilarityValidator',  # noqa:E501
     },
     {
         'NAME':
@@ -135,3 +137,8 @@ MEDIA_ROOT = BASE_DIR / 'media'
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+try:
+    from project.local_settings import *
+except ImportError:
+    ...

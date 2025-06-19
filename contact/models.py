@@ -1,6 +1,6 @@
-from django.db import models
-from django.utils import timezone
-from django.contrib.auth.models import User
+from django.db import models  # type: ignore
+from django.utils import timezone  # type: ignore
+from django.contrib.auth.models import User  # type: ignore
 
 # id (primary key - criado automaticamente pelo django)
 # first_name(string = Charfield), last_name(string = Charfield), phone
